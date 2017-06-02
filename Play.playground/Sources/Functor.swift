@@ -20,12 +20,4 @@ import Foundation
  }
  ```
  */
-public protocol Functor {
 
-    associatedtype A
-
-    // How to get -> Maybe<U>
-    // this gets Functor which needs to be downcasted to get proper type
-    func fmap<F: Functor, B>(_ by: ((A) -> B)) -> F where F.A == B
-    
-}
